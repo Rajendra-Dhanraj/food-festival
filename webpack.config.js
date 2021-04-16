@@ -25,15 +25,12 @@ module.exports = {
             loader: "file-loader",
             options: {
               name(file) {
-                return "[path][name].[ext]"; // rename img file
+                return "[path][name].[ext]";
               },
               publicPath: function (url) {
-                return url.replace("../", "/assets/"); // change path
+                return url.replace("../", "/assets/");
               },
             },
-          },
-          {
-            loader: "image-webpack-loader",
           },
         ],
       },
